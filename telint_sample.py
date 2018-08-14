@@ -45,11 +45,11 @@ if __name__ == "__main__":
                     sys.exit()
                 else:
                     # print data
-                    sys.stdout.write(data)
+                    sys.stdout.write(data.decode())
                     prompt()
 
             # user entered a message
             else:
                 msg = sys.stdin.readline()
-                s.send(msg)
+                s.send(msg.encode())
                 prompt()
